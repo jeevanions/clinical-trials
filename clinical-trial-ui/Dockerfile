@@ -2,16 +2,30 @@ FROM node:18-alpine
 
 WORKDIR /app
 
-COPY package.json .
+# Copy package files first
+COPY package*.json ./
 
+# Install dependencies
 RUN npm install
 
+# Install serve globally
 RUN npm i -g serve
 
-COPY . .
+# Enable caching for npm
+COPY .npmrc* ./
 
+# Add Docker layer caching
+COPY tsconfig*.json* ./
+COPY vite.config.* ./
+
+# Copy source code
+COPY src ./src
+COPY public ./public
+COPY index.html ./
+
+# Build the app
 RUN npm run build
 
-EXPOSE 3000
+EXPOSE 8000
 
-CMD [ "serve", "-s", "dist" ]
+CMD ["serve", "-s", "dist", "-l", "8000"]

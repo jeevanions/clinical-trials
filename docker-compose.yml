@@ -24,13 +24,12 @@ services:
       context: ./langserve_backend
     container_name: langserve_backend
     ports:
-      - "8000:8000"
       - "8080:8080"
     networks:
       - app-network
     environment:
       - OPENAI_API_KEY=to-update
-      - OPENAI_MODEL_NAME=gpt-4o
+      - OPENAI_MODEL_NAME=gpt-4
       - OPENAI_EMBEDDING_MODEL_NAME=text-embedding-3-small
       - OPENAI_EMBEDDING_MODEL_DIMENSION=1536
       - QDRANT_HOST=qdrant
@@ -56,11 +55,11 @@ services:
       context: ./clinical-trial-ui
     container_name: clinical-trial-ui
     ports:
-      - "3000:3000"  # Changed to match the actual port from your logs
+      - "8000:8000"
     networks:
       - app-network
     environment:
-      - BACKEND_URL=http://localhost:8080
+      - BACKEND_URL=http://backend:8080  # Changed from localhost to service name
     depends_on:
       backend:
         condition: service_started
