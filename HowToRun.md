@@ -1,5 +1,35 @@
+# Running it locall (No Docker)
+
+## Run qdrant locally for local dev
+
+docker run -p 6333:6333 -p 6334:6334 \
+    -v $(pwd)/qdrant_storage:/qdrant/storage:z \
+    qdrant/qdrant
+
+http://localhost:6333/dashboard#/collections
 
 
+## Start the backend 
+
+```bash
+cd langserve_backend
+poetry install
+
+pip install langchain-cli
+
+langchain serve
+```
+
+## Start Frontend
+
+```bash
+cd clinical-trial-ui
+npm install
+npm run dev
+
+```
+
+# Docker compose setup
 
 export DOCKER_BUILDKIT=1
 

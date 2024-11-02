@@ -57,7 +57,7 @@ class ClinicalTrialGraph:
             workflow.add_edge(node_name, END)
 
         # Set the entry point
-        workflow.set_entry_point("summary_node")
+        # workflow.set_entry_point("summary_node")
 
         return workflow.compile()
 
