@@ -24,6 +24,7 @@ langgraph = "^0.2.38"
 reportlab = "^4.2.5"
 markdown2 = "^2.5.1"
 python-multipart = "^0.0.12"
+python-dotenv = "^1.0.1"
 
 
 [tool.poetry.group.dev.dependencies]
