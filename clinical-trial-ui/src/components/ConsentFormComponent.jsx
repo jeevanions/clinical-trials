@@ -84,6 +84,7 @@ function ConsentFormComponent({ selectedFiles, textAreaData, onTextAreaDataUpdat
             }));
           } catch (error) {
             console.error("Error parsing chunk:", error);
+            console.error("Chunk:", chunk);
           }
         }
       } catch (error) {
