@@ -1,0 +1,49 @@
+(base) jmichaeldean@Js-MacBook-Air clinical-trials % history 150
+  150  git pull
+  151  git checkout docker
+  152  docker run -p 6333:6333 -p 6334:6334 \\n    -v $(pwd)/qdrant_storage:/qdrant/storage:z \\n    qdrant/qdrant
+  153  docker
+  154  docker pull qdrant/qdrant
+  155  docker start
+  156  cd langserve-backend
+  157  ls
+  158  cd langserve_backend
+  159  ls
+  160  poetry install
+  161  langchain serve
+  162  poetry add dot_env
+  163  poetry add dotenv
+  164  langchain serve
+  165  pip install langchain-cli
+  166  docker
+  167  docker run qdrant/qdrant
+  168  # NOTE:\n# Homebrew is not a Node.js package manager.\n# Please ensure it is already installed on your system.\n# Follow official instructions at https://brew.sh/\n# Homebrew only supports installing major Node.js versions and might not support the latest Node.js version from the 22 release line.\n\n# download and install Node.js\nbrew install node@22\n\n# verifies the right Node.js version is in the environment\nnode -v # should print `v22.11.0`\n\n# verifies the right npm version is in the environment\nnpm -v # should print `10.9.0`
+  169   echo 'export PATH="/opt/homebrew/opt/node@22/bin:$PATH"' >> ~/.zshrc
+  170  node 
+  171  ~/.zshrc
+  172  source ~/.zshrc
+  173  node
+  174  cd clinicl-trials
+  175  cd clinical-trials
+  176  cd experimental
+  177  cd documents
+  178  ls
+  179  ls -al
+  180  cd ..
+  181  cd ..
+  182  git pull mike main
+  183  git pull
+  184  hist
+  185  history
+  186  history 100
+  187  history 500 > history.txt
+  188  history 500 >> history.txt
+  189  clear
+  190  history 500
+  191  history | wc -l
+  192  history 100
+  193  echo history 100 >> history
+  194  ls
+  195  cat history
+  196  cat history.txt
+  
